@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module is for Rectangle class
+"""
 class Rectangle:
     """
     This class represents a rectangle with width and height properties.
