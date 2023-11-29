@@ -26,6 +26,11 @@ class Rectangle:
         """
         self.__width = width
         self.__height = height
+    def __del__(self):
+        """
+        Deconstructor that handles the Deletion of rectangle
+        """
+        print ("Bye rectangle...")
     @property
     def width(self):
         """
@@ -92,12 +97,12 @@ class Rectangle:
         perimeter Function
         """
         if self.__width == 0 or self.__height == 0:
-            return 0
+           return 0
         else:
-            return 2 * (self.__width + self.__height)
+           return 2 * (self.__width + self.__height)
     def __str__(self):
         """
-        formats The output with STR
+        str Handler
         """
         if self.__width == 0 or self.__height == 0:
             return ""
@@ -105,6 +110,7 @@ class Rectangle:
             return "\n".join(["#" * self.__width for _ in range(self.__height)])
     def __repr__(self) -> str:
         """
-        format The output with REPR
+        repr Handler
         """
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"Rectangle({self._width}, {self._height})"
+    
