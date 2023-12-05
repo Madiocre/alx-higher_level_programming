@@ -9,5 +9,6 @@ class MyList(list):
     This class prints a list
     """
     def print_sorted(self):
-        self.sort()
-        print(self)
+        copy_list = self[:]
+        copy_list.sort()
+        print(copy_list)
