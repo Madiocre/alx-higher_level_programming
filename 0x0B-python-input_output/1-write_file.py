@@ -2,6 +2,8 @@
 """
 Module Disc
 """
+
+
 def write_file(filename="", text=""):
     """
     Func for write
