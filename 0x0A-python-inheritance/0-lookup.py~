@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+"""
+This Module Looks up the directory of object
+"""
+def lookup(obj):
+    return dir(obj)
