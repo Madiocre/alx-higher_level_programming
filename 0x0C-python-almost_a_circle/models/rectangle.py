@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-from models.base import Base
 """
 Module Disc of a RECTANGLE
 """
 
 
+from models.base import Base
 class Rectangle(Base):
     """
     Base Class Disc

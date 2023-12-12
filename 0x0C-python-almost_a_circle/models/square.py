@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-from models.rectangle import Rectangle
 """
 Module Disc of a SQUARE
 """
 
 
+from models.rectangle import Rectangle
 class Square(Rectangle):    
     """
     Base Class Disc
