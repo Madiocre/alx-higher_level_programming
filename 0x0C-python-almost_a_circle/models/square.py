@@ -4,6 +4,7 @@ from models.rectangle import Rectangle
 Module Disc
 """
 
+
 class Square(Rectangle):    
     """
     Base Class Disc
@@ -18,10 +19,16 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """
+        Size
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
+        """
+        Size
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -30,9 +37,15 @@ class Square(Rectangle):
         self.__size = value
 
     def __str__(self):
+        """
+        STR format
+        """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.__size}"
     
     def update(self, *args, **kwargs):
+        """
+        Update
+        """
         if args and len(args) > 0:
             self.id = args[0]
             self.width = args[1]
@@ -47,6 +60,9 @@ class Square(Rectangle):
             self.y = kwargs.get('y', self.y)
 
     def to_dictionary(self):
+        """
+        Dict
+        """
         return {
             'id': self.id,
             'size': self.width,
