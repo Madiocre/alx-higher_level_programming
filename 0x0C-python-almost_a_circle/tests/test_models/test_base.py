@@ -38,5 +38,6 @@ class TestBase(unittest.TestCase):
         '''Tests sync between class and instance id.'''
         b = Base()
         self.assertEqual(getattr(Base, "_Base__nb_objects"), b.id)
+
 if __name__=='__main__':
 	unittest.main()

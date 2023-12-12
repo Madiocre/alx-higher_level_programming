@@ -14,14 +14,21 @@ class Rectangle(Base):
         __init__ Disc
         """
         super().__init__(id)
+        
+        if not isinstance(width, int):
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+        
+        self.__width = width
+        
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
-   
-        self.__width = width
+        
         self.__height = height
-   
+
         if not isinstance(x, int):
             raise TypeError("x must be an integer")
         if x < 0:
@@ -102,12 +109,28 @@ class Rectangle(Base):
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
     
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-        Updates depending on input
+        Update depending on input
         """
-        self.id = args[0] if args else self.id
-        self.__width = args[1] if len(args) > 1 else self.__width
-        self.__height = args[2] if len(args) > 2 else self.__height
-        self.__x = args[3] if len(args) > 3 else self.__x
-        self.__y = args[4] if len(args) > 4 else self.__y
+        if args and len(args) > 0:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
+        else:
+            self.id = kwargs.get('id', self.id)
+            self.__width = kwargs.get('width', self.__width)
+            self.__height = kwargs.get('height', self.__height)
+            self.__x = kwargs.get('x', self.__x)
+            self.__y = kwargs.get('y', self.__y)
+
+    def to_dictionary(self):
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
