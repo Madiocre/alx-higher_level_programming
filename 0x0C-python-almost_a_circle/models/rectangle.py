@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from models.base import Base
 """
-Module Disc
+Module Disc of a RECTANGLE
 """
 
 

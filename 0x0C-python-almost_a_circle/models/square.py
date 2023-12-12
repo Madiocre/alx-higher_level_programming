@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from models.rectangle import Rectangle
 """
-Module Disc
+Module Disc of a SQUARE
 """
 
 
