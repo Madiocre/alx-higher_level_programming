@@ -1,0 +1,11 @@
+#!/usr/bin/node
+const Arg = process.argv[2];
+const num = Number.isInteger(Arg);
+
+console.log(Arg);
+console.log(num);
+if (num > 0) {
+    console.log('My number: ' + num);
+} else {
+    console.log('Not a number');
+}
