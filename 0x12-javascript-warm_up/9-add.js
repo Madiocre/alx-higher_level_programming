@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function add(a, b) {
+function add (a, b) {
   return a + b;
 }
 
@@ -10,5 +10,5 @@ if (!isNaN(firstArg) && !isNaN(secondArg)) {
   const sum = add(firstArg, secondArg);
   console.log(sum);
 } else {
-  console.log("Please provide two valid numbers");
+  console.log('Please provide two valid numbers');
 }

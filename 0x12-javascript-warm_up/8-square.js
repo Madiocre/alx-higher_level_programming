@@ -8,15 +8,15 @@ if (firstArg) {
     // Outer loop for rows
     for (let i = 0; i < size; i++) {
       // Inner loop for columns
-      let row = "";
+      let row = '';
       for (let j = 0; j < size; j++) {
-        row += "X";
+        row += 'X';
       }
       console.log(row);
     }
   } else {
-    console.log("Missing size");
+    console.log('Missing size');
   }
 } else {
-  console.log("Missing size");
+  console.log('Missing size');
 }
