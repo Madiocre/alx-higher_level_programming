@@ -1,16 +1,11 @@
 #!/usr/bin/node
-const firstArg = process.argv[2];
-
-if (firstArg) {
-  const num = Number(firstArg);
-  // Check for NaN to ensure valid number conversion
-  if (!isNaN(num)) {
-    for (let i = 0; i < num; i++) {
-      console.log('C is fun');
-    }
-  } else {
-    console.log('Missing number of occurrences');
-  }
-} else {
+if (process.argv[2] === undefined || isNaN(process.argv[2])) {
   console.log('Missing number of occurrences');
+} else {
+  const x = Number(process.argv[2]);
+  let i = 0;
+  while (i < x) {
+    console.log('C is fun');
+    i++;
+  }
 }
